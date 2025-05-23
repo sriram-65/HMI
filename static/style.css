@@ -164,7 +164,7 @@ header .logo img{
 
   header .logo img{
     width:27%;
-    margin-top: -30px;
+    margin-top: -18px;
   }
     .links{
         display: none;
@@ -209,6 +209,11 @@ header .logo img{
     font-size: 30px;
     cursor: pointer;
    }
+
+   #home h1{
+    font-size: 40px;
+    font-weight: 900;
+   }
    
    .mobile li{
     
@@ -227,6 +232,6 @@ header .logo img{
    }
 
    #contact iframe{
-    width:465px;
+    width:334px;
    }
 }
