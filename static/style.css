@@ -1,0 +1,232 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:0;
+    padding:0;
+ 
+}
+
+header{
+    width:100%;
+    height: 75px;
+    padding:10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color: white;
+    box-shadow: 1px 1px 0px black;
+    z-index: 100;
+}
+
+header .logo img{
+    width:20%;
+    margin-top: -20px;
+    border-radius: 50%;
+}
+
+.links{
+    display: flex;
+    gap:60px;
+    margin-right: 40px;
+    margin-top: 14px;
+}
+
+.links li{
+    list-style: none;
+}
+
+.links li a{
+    text-decoration: none;
+    color:rgb(7, 7, 46);
+    transform: 0.5s;
+}
+
+.links li a:hover{
+    border-bottom: 1px solid #29f700;
+    transform: 0.5s;
+}
+
+
+#home{
+    width:100%;
+    height: 100vh;
+    margin-top: 10em;
+}
+
+#home img{
+    margin-top: -40px;
+  
+}
+
+.bar{
+    display: none;
+}
+.main-row a{
+    display: flex;
+    margin: 20px;
+    text-decoration: none;
+    cursor: auto;
+    color:rgba(0, 0, 0, 0.849)
+
+}
+
+.main-row i{    margin-right: 10px; color:brown;}
+
+.main-row .box-1{
+   border: 1px solid black;
+   padding:20px 20px 20px;
+  
+}
+
+
+.main-row .box-2{
+   border: 1px solid black;
+   padding:20px 20px 20px;
+}
+
+#service{
+    margin-top: -10rem;
+}
+
+
+#about{
+    margin-top: 10em;
+}
+
+#about p{
+    word-spacing: 3px;
+    word-wrap: break-word;
+}
+
+#about h1{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#about img{
+    width:65%;
+    margin-left: 10em;
+    border-radius: 50%;
+    border:1px dashed black;
+}
+
+#templates{
+    margin-top:10em;
+}
+
+
+.mobile{
+    display: none;
+}
+
+
+#contact{
+    margin-top: 10em;
+}
+
+#contact iframe , form{
+    margin-top: 33px;
+}
+
+#contact form input,textarea{
+    border:none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid #000;
+}
+
+#conatct form input{
+    width:100%;
+
+}
+
+#contact form input:focus{
+    border-bottom: 1px solid rgb(6, 6, 110);
+}
+
+
+
+#contact .email-content{
+    max-width:100%;
+}
+
+#contact .email-content input{
+    width:90%;
+}
+
+#contact .email-content textarea{
+    margin-top: 30px;
+}
+
+@media (max-width:950px) {
+
+  header .logo img{
+    width:27%;
+    margin-top: -30px;
+  }
+    .links{
+        display: none;
+    }
+
+    #about img{
+        display: none;
+    }
+    .mobile{
+        width:60%;
+        height: 100vh;
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 100;
+        right:0;
+        top:0;
+        padding: 10px 10px 15px;
+        display: none;
+    }
+    .bar{
+    position: fixed;
+    right:6%;
+    display: block;
+    z-index: 1000;
+    margin-top: 15px;
+   }
+
+   #home img{
+    margin-top: 30px;
+   }
+
+   #service{
+
+    margin-top: 40px;
+   }
+
+
+
+    .bar i{
+    font-size: 30px;
+    cursor: pointer;
+   }
+   
+   .mobile li{
+    
+    list-style: none;
+    margin:40px;
+   }
+
+   .mobile li a{
+
+    text-decoration: none;
+    color:black;
+   }
+
+    .visible-nav{
+    display: block;
+   }
+
+   #contact iframe{
+    width:465px;
+   }
+}
