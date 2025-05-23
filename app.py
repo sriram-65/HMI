@@ -1,5 +1,6 @@
 from flask import Flask , redirect , request , session , url_for , render_template 
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 import cloudinary
 import cloudinary.uploader
 
@@ -47,8 +48,19 @@ def upload():
         
         TEMPLATES_DB.insert_one(data)
         return redirect("/")
-    return render_template("admin.html")
+    get_templates = TEMPLATES_DB.find({}).sort("_id" , -1)
+    return render_template("admin.html" , templates = get_templates)
+        
         
 
+@app.route("/del/<template_id>" , methods=["POST"])
+def delete_post(template_id):
+    try:
+        TEMPLATES_DB.delete_one({"_id":ObjectId(template_id)})
+        return redirect("/")
+    except:
+        return "Server : Unable handle Your request"
+        
+    
 if __name__ == "__main__":
     app.run(debug=True)
