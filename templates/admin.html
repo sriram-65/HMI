@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template Upload Form</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -165,6 +167,34 @@
             <button type="submit" class="submit-btn">Upload Template</button>
         </form>
     </div>
+
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% if templates  %}
+            {% for i in templates %}
+            <div class="col-md-6">
+               <p>Title : {{i.title}}</p>
+               <img src="{{i.img}}" width="100" height="100" alt="">
+               <hr>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <br>
+                <form action="{{url_for('delete_post' , template_id=i._id)}}" method="POST">
+                <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+            {%endfor%}
+            {%endif%}
+        </div>
+    </div>
+
+
+
+
 
     <script>
 
