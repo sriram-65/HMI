@@ -95,15 +95,7 @@
             margin-right: 8px;
         }
         
-        input[type="file"] {
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-        }
+     
         
         .submit-btn {
             background-color: #3498db;
@@ -127,12 +119,58 @@
             font-size: 14px;
             color: #666;
         }
+
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .submit-btn {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      background: #218838;
+    }
+    .imgs{
+        width:100%;
+        display: flex;
+        gap:20px;
+    }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Upload Template</h1>
-        <form action="/upload-Template" method="POST" enctype="multipart/form-data">
+        <form action="/upload-Template" method="POST" enctype="multipart/form-data" >
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" id="title" placeholder="Enter template title" name="title" required>
@@ -151,9 +189,7 @@
             <div class="form-group">
                 <label for="img">Template Image</label>
                 <div class="file-input-wrapper">
-                    <button type="button" class="file-input-button">
-                        <i>📁</i> Choose Image File
-                    </button>
+                  
                     <input type="file" id="img" name="img" accept="image/*" required>
                 </div>
                 <div id="file-name" class="file-name">No file chosen</div>
@@ -172,18 +208,19 @@
     <br>
     <br>
     <div class="container">
+        <h1 class="text-center"> Templates Informations </h1>
         <div class="row">
             {% if templates  %}
             {% for i in templates %}
             <div class="col-md-6">
                <p>Title : {{i.title}}</p>
-               <img src="{{i.img}}" width="100" height="100" alt="">
+               <img src="{{i.img}}" width="250" height="170" alt="">
                <hr>
             </div>
             <div class="col-md-6">
                 <br>
                 <br>
-                <form action="{{url_for('delete_post' , template_id=i._id)}}" method="POST">
+                <form action="{{url_for('delete_post' , template_id=i._id)}}" method="POST" onsubmit="return confirm('Are you Sure Want to delete this Template ?')">
                 <button class="btn btn-danger">Delete</button>
                 </form>
             </div>
@@ -193,9 +230,124 @@
     </div>
 
 
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+
+  <div class="form-container">
+    <h2>Website Order Form</h2>
+    <form action="/upload-information-about-shops" method="POST" enctype="multipart/form-data" >
+      
+      <label for="name">Shop Owner Name</label>
+      <input type="text" id="name" name="soname" required>
+
+      <label for="phone">Phone Number (WhatsApp)</label>
+      <input type="tel" id="phone" name="phoneno" required>
+
+      <label for="address">Shop Address</label>
+      <textarea id="address" name="address" rows="2"></textarea>
+
+      <label for="shop_name">Shop Name</label>
+      <input type="text" id="shop_name" name="shop_name" required>
+
+      <label for="business_type">What do you sell?</label>
+      <input type="text" id="business_type" name="business_type">
+
+      <label for="logo">Do you have a logo?</label>
+      <select id="logo" name="logo">
+        <option value="Yes">Yes</option>
+        <option value="No">No (Need logo)</option>
+      </select>
+
+      <label for="description">Shop Description</label>
+      <textarea id="description" name="description" rows="3"></textarea>
+
+      <label for="products">List of Products/Services</label>
+      <textarea id="products" name="products" rows="3"></textarea>
+
+      <label for="website_type">Website Type</label>
+      <select id="website_type" name="website_type">
+        <option value="static">Static Website (₹499)</option>
+        <option value="full">Full Website with Contact Form (₹999)</option>
+      </select>
 
 
+      <label for="advance">Advance Paid (₹)</label>
+      <input type="number" id="advance" name="advance">
 
+      <label for="imgs"> Upload Image </label>
+   
+      <input type="file" id="file-upload" name="img-upload" accept="image/*" multiple>
+
+
+      <label for="payment_mode">Payment Mode</label>
+      <select id="payment_mode" name="payment_mode">
+        <option value="GPay">GPay</option>
+        <option value="PhonePe">PhonePe</option>
+        <option value="Cash">Cash</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Submit Order</button>
+    </form>
+  </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <br>
+    <br>
+
+    <div class="container">
+
+        <h1 class="text-center"> Users Deatils </h1>
+        {% if deatils %}
+        {% for i in deatils %}
+     <div class="row">
+
+          <div class="col-12">
+                            <p>
+                <strong>Owner:</strong> {{ i.shop_owner_name }} <br>
+                <strong>Phone:</strong> {{ i.phone_no }} <br>
+                <strong>Address:</strong> {{ i.shop_adress }} <br>
+                <strong>Shop Name:</strong> {{ i.shop_name }} <br>
+                <strong>Business Type:</strong> {{ i.business_type }} <br>
+                <strong>Logo:</strong> {{i.shop_logo}} <br>
+                <strong>Description:</strong> {{ i.description }} <br>
+                <strong>Products:</strong> {{ i.products }} <br>
+                <strong>Website Type:</strong> {{ i.website_type }} <br>
+                <strong>Advance Payment:</strong> ₹{{ i.advance_payment }} <br>
+                <strong>Payment Mode:</strong> {{ i.payment_mode }}
+
+               
+                </p>
+
+           {% for img in i.imgs%}
+                <div class="imgs">
+                    <br>
+                    <img src="{{img}}" class="img-fluid" width="300"/>
+                </div>
+                {%endfor%}
+
+
+            <button class="btn btn-danger"> delete </button>
+            <button class="btn btn-warning">Edit </button>
+                <hr>
+                <hr>
+
+        </div>
+
+    </div>
+    {%endfor%}
+    {%endif%}
+      
+    </div>
+
+    
     <script>
 
         document.getElementById('img').addEventListener('change', function(e) {
