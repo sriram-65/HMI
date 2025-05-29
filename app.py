@@ -104,7 +104,14 @@ def shops():
     COUSTOMERS_DB.insert_one(data)
     return redirect("/")
     
-
+    
+@app.route("/delelet/<coustomers_id>" , methods=["POST"])
+def Dc(coustomers_id):
+    try:
+        COUSTOMERS_DB.delete_one({"_id":ObjectId(coustomers_id)}) 
+        return redirect("/upload-Template") 
+    except:
+        return "Server : Unable handle Your request"
 
     
 if __name__ == "__main__":
