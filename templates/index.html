@@ -3,1017 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMI - Digital Innovation Company</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="google-site-verification" content="mBGrfwvDWY2hk9dDO1XJHJQIPUEkuGsse783GgJVsh0" />
+    <title> HMI -> HOME MADE INVIATIONS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-    body{
-        margin:0;
-        padding: 0;
-        font-family: "Poppins", sans-serif;
-    }
-
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --dark-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
-            --accent-color: #6366f1;
-            --success-color: #10b981;
-            --warning-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-       
-
-        
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar-brand {
-            font-weight: 800;
-            font-size: 1.8rem;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-link {
-            font-weight: 500;
-            color: var(--text-dark) !important;
-            margin: 0 0.5rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-color) !important;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            background: var(--accent-color);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,800 1000,1000"/></svg>');
-            background-size: cover;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        .btn-primary-custom {
-            background: linear-gradient(45deg, #10b981, #059669);
-            border: none;
-            padding: 1rem 2rem;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
-        }
-
-        .btn-primary-custom:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
-        }
-
-        .btn-outline-custom {
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            color: white;
-            padding: 1rem 2rem;
-            font-weight: 600;
-            border-radius: 50px;
-            background: transparent;
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline-custom:hover {
-            background: white;
-            color: var(--accent-color);
-            border-color: white;
-        }
-
-    
-        .stats {
-            background: var(--dark-gradient);
-            color: white;
-            padding: 4rem 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: var(--secondary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-top: 0.5rem;
-        }
-
-        .services {
-            padding: 6rem 0;
-            background: #f8fafc;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--primary-gradient);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--primary-gradient);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .service-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .service-features {
-            list-style: none;
-            padding: 0;
-        }
-
-        .service-features li {
-            padding: 0.5rem 0;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-        }
-
-        .service-features i {
-            color: var(--success-color);
-            margin-right: 1rem;
-            width: 20px;
-        }
-
-       
-        .about {
-            padding: 6rem 0;
-            background: white;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 2rem;
-            color: var(--text-dark);
-        }
-
-        .about p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .features {
-            padding: 6rem 0;
-            background: #f8fafc;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .feature-emoji {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .feature-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        
-        .ai-features {
-            padding: 6rem 0;
-            background: var(--dark-gradient);
-            color: white;
-        }
-
-        .ai-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 2.5rem 2rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            height: 100%;
-        }
-
-        .ai-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-        }
-
-        .ai-emoji {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .ai-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .team {
-            padding: 6rem 0;
-            background: white;
-        }
-
-        .team-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .team-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            object-fit: cover;
-            border: 4px solid var(--accent-color);
-        }
-
-        .team-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .team-role {
-            color: var(--accent-color);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        
-        .contact {
-            padding: 6rem 0;
-            background: var(--primary-gradient);
-            color: white;
-        }
-
-        .contact-form {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .form-control {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            padding: 1rem;
-            color: white;
-            font-size: 1rem;
-        }
-
-        .form-control:focus {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.5);
-            box-shadow: none;
-            color: white;
-        }
-
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-    
-        .footer {
-            background: #0f172a;
-            color: white;
-            padding: 4rem 0 2rem;
-        }
-
-        .footer h5 {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-
-        .footer a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: var(--accent-color);
-        }
-
-       
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-on-scroll {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-       
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .service-card,
-            .contact-form {
-                padding: 2rem 1.5rem;
-            }
-            
-            .hero-visual {
-                display: none;
-            }
-        }
-
-        
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent-color);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #4f46e5;
-        }
-      
-        .navbar-toggler {
-            border: none;
-            padding: 0.25rem 0.5rem;
-        }
-        
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-        
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css"/>
 </head>
 <body>
-    
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#home">HMI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Solutions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+    <header>
+        <div class="logo">
+            <img src="/static/HMI.png" alt="HMI">
         </div>
-    </nav>
+        <div class="links">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#service">Service</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#templates">Templates</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </div>
 
+
+        <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+        </div>
     
-    <section id="home" class="hero">
+           <div class="mobile">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#service">Service</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#templates">Templates</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </div>
+    </header>
+
+    <section id="home">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 hero-content">
-                    <h1 class="animate-on-scroll">Transforming Ideas Into Digital Reality</h1>
-                    <p class="animate-on-scroll">We're a cutting-edge digital innovation company specializing in scalable web solutions, AI-powered applications, and enterprise-grade technology that drives business growth globally.</p>
-                    <div class="animate-on-scroll">
-                        
-                        <button class="btn btn-outline-custom">View Our Work</button>
-                    </div>
+            <div class="row">
+                <div class="col-md-6">
+                  <h1>From Local to Globel <br> We Build , <span style="color:#0E2148">You Grow</span></h1>
+                  <p class="text-muted">" From Local to Global, We Build, You Grow " reflects our mission to empower businesses at every stage. We craft tailored solutions that start from your roots and expand your reach worldwide. With innovation, strategy, and support, we build your path to success — helping you grow beyond boundaries with confidence.</p>
+                  <button class="btn btn-dark"><a href="#templates" style="text-decoration:none; color:white;">See templates </a></button>
+                  <button class="btn  btn-outline-primary"><a href="#service"  style="text-decoration:none; color:black;"> Service</a></button>
                 </div>
-                <div class="col-lg-6">
-                    <div class="hero-visual text-center">
-                        <div style="font-size: 15rem; opacity: 0.3; color: rgba(255,255,255,0.2);">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+
+                    <img src="https://preview.colorlib.com/theme/launch/images/market-launch-pana.svg" class="img-fluid" alt="">
+                    
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="service">
+        <div class="container">
+            <h1 class="text-center text-danger">Our Services</h1>
+            <br>
+            <div class="row main-row">
+                <div class="col-md-6 box-1">
+                    <h1>Static WebSites</h1>
+                    <br>
+                    <p class="text-muted">For Shops That just Need an Online Presence With basic Info</p>
+
+                    <a href=""><i class="fa-solid fa-check"></i> Fast & LightWeight</a>
+                    <a href=""><i class="fa-solid fa-check"></i> Mobile Friendly</a>
+                    <a href=""><i class="fa-solid fa-check"></i>Custom Design</a>
+                    <a href=""><i class="fa-solid fa-check"></i>Fast Delivary</a>
+                    <a href=""><i class="fa-solid fa-check"></i> Ideal For : Shops , Salons , tuition centers , backeries</a>
+
+                </div>
+
+                <div class="col-md-6 box-2">
+                         <h1>Full Stack WebSites</h1>
+                         <br>
+                    <p class="text-muted">For shops that want dynamic features and growth support</p>
+
+                    <a href=""><i class="fa-solid fa-check"></i>Admin panel</a>
+                    <a href=""><i class="fa-solid fa-check"></i> Login/Signup system</a>
+                    <a href=""><i class="fa-solid fa-check"></i>Product listing/contact form/chat</a>
+                    <a href=""><i class="fa-solid fa-check"></i>MongoDB/Node.js/flask + React or Next.js ,</a>
+                    <a href=""><i class="fa-solid fa-check"></i> Ideal For : Shops , Salons , tuition centers , backeries , Grocery stores, Small e-com, etc...</a>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+           <div class="row">
+            <div class="col-md-6">
+               
+             <h1 class="text-center">About Us</h1>
+                <p class="text-muted">
+
+                We are a passionate team of young developers dedicated to helping local businesses grow online. From static websites to full-featured dynamic web apps, we craft digital solutions tailored to your shop, school, tuition center, or startup.
+            
+                <br>
+                <br>
+                💡 Whether you're a small bakery or a local tuition center, we turn your business “from local to global.”
+                We handle design, development, domain, and hosting — everything you need in one place!
+    
+                <br>
+                <br>
+                📈 Start your digital journey today with a website that works as hard as you do.
+                </p>
+             
+            </div>
+            <div class="col-md-6">
+                <img src="/static/HMI.png" class="img-fluid" alt="Home Made Inviations">
+            </div>
+           </div>
+        </div>
+    </section>
+
+
+<br>
+<br>
+
+<section id="whatwebuild" class="py-5 bg-light">
+  <div class="container">
+    <h1 class="text-center mb-3">What We Build For Your Website</h1>
+    <p class="text-muted text-center mb-5">
+      We design and develop modern, user-friendly websites tailored to your business needs — whether it's a shop, hospital, supermarket, or service.
+    </p>
+
+    <div class="row g-4">
+
+      <!-- Feature 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>🎨 Modern, Mobile-Friendly Website</h5>
+          <p>Your website will work beautifully on mobile phones, tablets, and computers, giving your customers a smooth experience anywhere.</p>
+          
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>🧭 Easy Navigation & Clean Design</h5>
+          <ul class="list-unstyled mb-0">
+            <li><i class="fa-solid fa-check text-success me-2"></i>Services or Products</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i>About your business</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i>Contact and location info</li>
+          </ul>
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>📞 Instant Communication Tools</h5>
+          <ul class="list-unstyled mb-0">
+            <li><i class="fa-solid fa-check text-success me-2"></i>Click-to-Call buttons</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i>WhatsApp chat</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i>Contact forms (email direct)</li>
+          </ul>
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>🗂️ Custom Pages Built for You</h5>
+          <ul class="list-unstyled mb-0">
+            <li><i class="fa-solid fa-check text-success me-2"></i>🏥 Hospital: Appointments, emergency contacts</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i>🛒 Supermarket: Listings, offers, delivery</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i>🛍️ Shop: Gallery, categories, new arrivals</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="aifeatures" class="py-5">
+  <div class="container">
+    <h1 class="text-center mb-3">🚀 AI Features For Your Website</h1>
+    <p class="text-muted text-center mb-5">
+      We integrate smart AI tools into your website to improve customer experience, automate tasks, and boost your business efficiency.
+    </p>
+
+    <div class="row g-4">
+
+      <!-- AI Chat Assistant -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>🤖 AI Chat Assistant</h5>
+          <p>Helps your visitors with instant replies to common questions like opening hours, services, and pricing — even when you're offline!</p>
+        </div>
+      </div>
+
+      <!-- Smart Appointment Booking -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>📅 Smart Appointment Booking</h5>
+          <p>AI can suggest available slots, send reminders, and automatically sync with your schedule.</p>
+        </div>
+      </div>
+
+      <!-- Product Recommendation -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>🛍️ AI Product Recommendations</h5>
+          <p>Suggests popular or related items to customers based on their browsing or buying behavior.</p>
+        </div>
+      </div>
+
+      <!-- Auto Replies & Email -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>📧 Auto-Reply & Email Smart Responses</h5>
+          <p>Instantly sends professional replies to customer inquiries via forms or emails using AI-generated content.</p>
+        </div>
+      </div>
+
+      <!-- Language Translation -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>🌐 Multi-language AI Translation</h5>
+          <p>Automatically translates your website into Tamil, English, Hindi, or any other language your customer prefers.</p>
+        </div>
+      </div>
+
+      <!-- AI Analytics -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <h5>📊 AI Insights & Analytics</h5>
+          <p>Get smart reports on what your customers like, when they visit most, and how they interact with your site.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="dev" class="py-5 bg-light">
+  <div class="container">
+    <h1 class="mb-5 text-primary fw-bold text-center">Developers & Founders</h1>
+    <div class="row justify-content-center g-4">
+      
+    
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm text-center p-3 hover-shadow transition">
+          <img src="static/20220828_093649.jpg"
+               class="rounded-circle mx-auto"
+               style="width: 150px; height: 150px; object-fit: cover;"
+               alt="Developer 1">
+<h5 class="mt-3 fw-semibold mb-0">K. Thirulingeshwar</h5>
+          <p class="text-muted small">CEO and Founder of HMI </p>
+        </div>
+      </div>
 
    
-    <section class="stats">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 stat-item">
-                    <span class="stat-number">15+</span>
-                    <div class="stat-label">Projects Delivered</div>
-                </div>
-                <div class="col-md-3 stat-item">
-                    <span class="stat-number">15+</span>
-                    <div class="stat-label">Enterprise Clients</div>
-                </div>
-                <div class="col-md-3 stat-item">
-                    <span class="stat-number">4+</span>
-                    <div class="stat-label">HMI's Major Projects</div>
-                </div>
-                <div class="col-md-3 stat-item">
-                    <span class="stat-number">99.9%</span>
-                    <div class="stat-label">Uptime Guarantee</div>
-                </div>
-            </div>
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm text-center p-3 hover-shadow transition">
+          <img src="https://res.cloudinary.com/dbrmvywb0/image/upload/v1748155625/gu05arqizojq0topxdit.jpg"
+               class="rounded-circle mx-auto"
+               style="width: 150px; height: 150px; object-fit: cover;"
+               alt="Developer 2">
+          <h5 class="mt-3 fw-semibold mb-0">N.G Sriram</h5>
+          <p class="text-muted small">Co-founder of HMI</p>
         </div>
-    </section>
+    </div>
 
+    <h3 class=" text-center mb-3 text-success" > Project Manager </h3>
+
+    <div class="col-md-4">
+        
+          <div class="card border-0 shadow-sm text-center p-3 hover-shadow transition">
+
+          <img src="https://res.cloudinary.com/dbrmvywb0/image/upload/v1749299204/pa9qmzykiydrl6jcqlyv.jpg"
+               class=" mx-auto img-fluid"
+               style="width: 350px; height: 350px; object-fit: cover;"
+               alt="Developer 2">
+          <h5 class="mt-3 fw-semibold mb-0">R . Siva</h5>
+          <p class="text-muted small">Project Manager of HMI</p>
+        </div>
+    </div>
     
-    <section id="services" class="services">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-3">Enterprise Solutions</h2>
-                <p class="lead text-muted">Comprehensive digital transformation services for modern businesses</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="templates" >
+  <div class="container">
+    <h1 class="text-center"> Website templates </h1>
+    <p class="text-muted text-center "> Visit Our Website Templates And Choose One From this You Want</p>
+    <div class="row g-4 mt-4"> 
+      {% if templates %}
+        {% for i in templates %}
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex ">
+            <div class="card w-100 shadow-sm">
+              <img src="{{ i.img }}" class="card-img-top" alt="{{ i.title }}">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ i.title }}</h5>
+                <h5 class="card-title">{{ i.des }}</h5>
+                <p class="card-text text-muted">{{ i.category }}</p>
+                <a href="{{ i.Links }}" class="btn btn-primary mt-auto">Preview</a>
+              </div>
             </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <h1 class="text-center">  Contact Us</h1>
+  <p class="text-center text-muted mt-4"> Contact With Our Team to improve Some content or bugs in your App we Will Here To Help You !. </p>
+ <div class="row">
+    <div class="col-md-6">
+         <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="73411279-1f4b-4d96-bdc5-d95ff1975d20">
+            <div class="fname-lname">
+                <input type="text" name="fistname" placeholder="Enter Fisrt Name">
+                
+                 <input type="text" name="last-name" placeholder="Enter Last Name" style="margin-top:30px">
+            </div>
+            <br>
+              <br>
+            <div class="email-content">
+                <input type="email" name="email" placeholder="Enter Your Email Address eg:hello@example.com">
+                <br>
+                 <textarea name="" name="content" id="" cols="30" rows="5" placeholder="Give Your Feedback"></textarea>
+            </div>
+                  <button class="btn  btn-primary mt-4">Send as Meassage</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+         <img src="https://assets-v2.lottiefiles.com/a/e84e8ee6-1170-11ee-9647-d3729348d81a/WnrwQzHsg9.gif" class="img-fluid">
+    </div>
+ </div>
+</div>
+</section>
+
+
+
+
+
+<hr>
+<footer class="text-black">
+        <div class="container py-5">
             <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3 class="service-title">Enterprise Web Applications</h3>
-                        <p class="text-muted mb-4">Scalable, high-performance web applications built with cutting-edge technology stacks.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i>Cloud-Native Architecture</li>
-                            <li><i class="fas fa-check"></i>Microservices Integration</li>
-                            <li><i class="fas fa-check"></i>Advanced Security Protocols</li>
-                            <li><i class="fas fa-check"></i>Global CDN Distribution</li>
-                            <li><i class="fas fa-check"></i>24/7 Monitoring & Support</li>
-                        </ul>
-                    </div>
+                <div class="col-lg-4 fade-in" style="opacity: 1; transform: translateY(0px);">
+                    <img src="/static/HMI.png" alt="HMI" width="120" class="mb-3">
+                    <p>Helping local businesses establish and grow their online presence with custom digital solutions.</p>
+                  
                 </div>
-                <div class="col-lg-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3 class="service-title">AI-Powered Solutions</h3>
-                        <p class="text-muted mb-4">Next-generation applications powered by artificial intelligence and machine learning.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i>Custom AI Model Development</li>
-                            <li><i class="fas fa-check"></i>Intelligent Automation</li>
-                            <li><i class="fas fa-check"></i>Predictive Analytics</li>
-                            <li><i class="fas fa-check"></i>Natural Language Processing</li>
-                            <li><i class="fas fa-check"></i>Computer Vision Systems</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="animate-on-scroll">Pioneering Digital Innovation</h2>
-                <p class="animate-on-scroll">HMI is a leading digital transformation company that bridges the gap between cutting-edge technology and business success. Founded by visionary technologists, we've grown from a startup to a global force in digital innovation.</p>
-                <p class="animate-on-scroll">Our mission extends beyond code – we architect digital ecosystems that scale businesses from local markets to global enterprises. With our headquarters in India and clients worldwide, we're not just building websites; we're crafting the digital infrastructure of tomorrow.</p>
-                <div class="row mt-5">
-                    <div class="col-md-4 text-center">
-                        <h3 class="text-primary">Innovation First</h3>
-                        <p>Leveraging the latest technologies to solve complex business challenges</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <h3 class="text-primary">Global Scale</h3>
-                        <p>Building solutions that work seamlessly across continents and cultures</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <h3 class="text-primary">Future Ready</h3>
-                        <p>Preparing businesses for tomorrow's digital landscape today</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section class="features">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-3">What We Deliver</h2>
-                <p class="lead text-muted">Comprehensive solutions tailored for enterprise success</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <span class="feature-emoji">🚀</span>
-                        <h4 class="feature-title">High-Performance Architecture</h4>
-                        <p class="text-muted">Lightning-fast applications optimized for peak performance across all devices and platforms.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <span class="feature-emoji">🔒</span>
-                        <h4 class="feature-title">Enterprise Security</h4>
-                        <p class="text-muted">Bank-grade security protocols protecting your data with advanced encryption and compliance standards.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <span class="feature-emoji">📱</span>
-                        <h4 class="feature-title">Omnichannel Experience</h4>
-                        <p class="text-muted">Seamless user experiences across web, mobile, tablet, and emerging platforms.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <span class="feature-emoji">⚡</span>
-                        <h4 class="feature-title">Real-time Integration</h4>
-                        <p class="text-muted">Live data synchronization with your existing systems, APIs, and third-party services.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <span class="feature-emoji">📊</span>
-                        <h4 class="feature-title">Advanced Analytics</h4>
-                        <p class="text-muted">Deep insights into user behavior, performance metrics, and business intelligence.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <span class="feature-emoji">🌐</span>
-                        <h4 class="feature-title">Global Scalability</h4>
-                        <p class="text-muted">Infrastructure designed to handle millions of users with automatic scaling capabilities.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="ai-features">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-3">AI-Powered Innovation</h2>
-                <p class="lead" style="color: rgba(255,255,255,0.8);">Cutting-edge artificial intelligence solutions that transform business operations</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="ai-card">
-                        <span class="ai-emoji">🤖</span>
-                        <h4 class="ai-title">Intelligent Virtual Assistants</h4>
-                        <p style="color: rgba(255,255,255,0.8);">Advanced AI chatbots with natural language processing, sentiment analysis, and multilingual support.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="ai-card">
-                        <span class="ai-emoji">🔮</span>
-                        <h4 class="ai-title">Predictive Analytics Engine</h4>
-                        <p style="color: rgba(255,255,255,0.8);">Machine learning models that forecast trends, optimize operations, and drive strategic decisions.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="ai-card">
-                        <span class="ai-emoji">🎯</span>
-                        <h4 class="ai-title">Personalization AI</h4>
-                        <p style="color: rgba(255,255,255,0.8);">Dynamic content and product recommendations tailored to individual user preferences and behavior.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="ai-card">
-                        <span class="ai-emoji">⚡</span>
-                        <h4 class="ai-title">Process Automation</h4>
-                        <p style="color: rgba(255,255,255,0.8);">Intelligent workflow automation that reduces manual tasks and increases operational efficiency.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="ai-card">
-                        <span class="ai-emoji">🌍</span>
-                        <h4 class="ai-title">Global Intelligence</h4>
-                        <p style="color: rgba(255,255,255,0.8);">Real-time language translation, cultural adaptation, and international market analysis.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="ai-card">
-                        <span class="ai-emoji">📈</span>
-                        <h4 class="ai-title">Business Intelligence AI</h4>
-                        <p style="color: rgba(255,255,255,0.8);">Automated reporting, anomaly detection, and strategic insights powered by advanced algorithms.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-    <section id="team" class="team">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-3">Leadership Team</h2>
-                <p class="lead text-muted">Visionary leaders driving digital transformation</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card">
-                        <div class="team-image" style="background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
-                            KT
-                        </div>
-                        <h4 class="team-name">K. Thirulingeshwar</h4>
-                        <p class="team-role">Chief Executive Officer & Founder</p>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card">
-                        <div class="team-image" style="background: linear-gradient(135deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
-                            NS
-                        </div>
-                        <h4 class="team-name">N.G Sriram</h4>
-                        <p class="team-role">Chief Technology Officer & Co-Founder</p>
-                        
-                    </div>
-                </div>
-              
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="display-4 fw-bold mb-4">Let's Build Something Extraordinary</h2>
-                    <p class="lead mb-4" style="color: rgba(255,255,255,0.9);">Ready to transform your business with cutting-edge digital solutions? Our team of experts is here to bring your vision to life.</p>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <div class="me-3" style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-envelope" style="color: white;"></i>
-                                </div>
-                                <div>
-                                    <strong>Email</strong><br>
-                                    <small style="color: rgba(255,255,255,0.8);">hmisrithiru@gmail.com</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <div class="me-3" style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-phone" style="color: white;"></i>
-                                </div>
-                                <div>
-                                    <strong>Phone</strong><br>
-                                    <small style="color: rgba(255,255,255,0.8);">+91 9003957919</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact-form">
-                        <h3 class="mb-4">Start Your Project</h3>
-                        <form id="project-form" action="https://api.web3forms.com/submit" method="POST">
-                            <input type="hidden" name="access_key" value="73411279-1f4b-4d96-bdc5-d95ff1975d20">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" name="firstname" class="form-control" placeholder="First Name" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" name="lastname" class="form-control" placeholder="Last Name" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" name="email" class="form-control" placeholder="Business Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" name="company" class="form-control" placeholder="Company Name">
-                            </div>
-                            <div class="mb-3">
-                                <select name="service" class="form-control">
-                                    <option value="">Select Service</option>
-                                    <option value="enterprise-web">Enterprise Web Application</option>
-                                    <option value="ai-solutions">AI-Powered Solutions </option>
-                                                                        <option value="mobile-app">Mobile Application</option>
-                                    <option value="consulting">Technology Consulting</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <textarea name="message" class="form-control" rows="4" placeholder="Tell us about your project" required></textarea>
-                            </div>
-                           
-                            <button type="submit" class="btn btn-primary-custom w-100">Submit Project Request</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5 class="mb-4">HMI</h5>
-                    <p style="color: rgba(255,255,255,0.7);">Transforming businesses through innovative digital solutions and cutting-edge technology.</p>
-                    <!-- <div class="d-flex mt-4">
-                        <a href="#" class="me-3" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fab fa-linkedin-in" style="color: white;"></i>
-                        </a>
-                        <a href="#" class="me-3" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fab fa-twitter" style="color: white;"></i>
-                        </a>
-                        <a href="#" class="me-3" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fab fa-github" style="color: white;"></i>
-                        </a>
-                    </div> -->
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h5>Company</h5>
+                <div class="col-lg-2 col-md-4 fade-in delay-1" style="opacity: 1; transform: translateY(0px);">
+                    <h5 class="mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#about">About Us</a></li>
-                        <li class="mb-2"><a href="#services">Services</a></li>
-                        <li class="mb-2"><a href="#team">Team</a></li>
-                        <li class="mb-2"><a href="#contact">Contact</a></li>
+                        <li class="mb-2"><a href="#home" class="text-black text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#service" class="text-black text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#about" class="text-black text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#templates" class="text-black text-decoration-none">Templates</a></li>
+                        <li><a href="#contact" class="text-black text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h5>Services</h5>
+                <div class="col-lg-3 col-md-4 fade-in delay-2" style="opacity: 1; transform: translateY(0px);">
+                    <h5 class="mb-4">Services</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#">Web Development</a></li>
-                        <li class="mb-2"><a href="#">AI Solutions</a></li>
-                        <li class="mb-2"><a href="#">Mobile Apps</a></li>
-                        <li class="mb-2"><a href="#">Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="#" class="text-black text-decoration-none">Static Websites</a></li>
+                        <li class="mb-2"><a href="#" class="text-black text-decoration-none">Full Stack Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-black text-decoration-none">E-commerce Solutions</a></li>
+                        <li><a href="#" class="text-black text-decoration-none">Website Maintenance</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-4 mb-4">
-                    <h5>Contact Info</h5>
+                <div class="col-lg-3 col-md-4 fade-in delay-3" style="opacity: 1; transform: translateY(0px);">
+                    <h5 class="mb-4">Contact Info</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2" style="color: rgba(255,255,255,0.7);">
-                            <i class="fas fa-map-marker-alt me-2"></i> Madurai, India
-                        </li>
-                        <li class="mb-2">
-                            <a href="mailto:hmisrithiru@gmail.com">
-                                <i class="fas fa-envelope me-2"></i> hmisrithiru@gmail.com
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="tel:+919003957919">
-                                <i class="fas fa-phone me-2"></i> +91 9003957919  , +91 9042621997
-                            </a>
-                        </li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hmisrithiru@gmail.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +91 900395791 , +91 9042621997</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Madurai , india</li>
                     </ul>
                 </div>
             </div>
-            <hr style="border-color: rgba(255,255,255,0.1);">
-            <div class="row">
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <p class="mb-0" style="color: rgba(255,255,255,0.5);">&copy; 2025 HMI. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" style="color: rgba(255,255,255,0.5); margin-right: 1rem;">Privacy Policy</a>
-                    <a href="#" style="color: rgba(255,255,255,0.5);">Terms of Service</a>
-                </div>
+            <hr class="my-5" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center fade-in delay-4" style="opacity: 1; transform: translateY(0px);">
+                <p class="mb-0">© 2025 HMI - Home Made Inviations. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-
-        document.querySelectorAll('a.nav-link').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        
-        function checkScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                if (elementPosition < screenPosition) {
-                    element.style.opacity = 1;
-                    element.style.transform = 'translateY(0)';
-                }
-            });
-        }
-
-        
-        document.querySelectorAll('.animate-on-scroll').forEach(element => {
-            element.style.opacity = 0;
-            element.style.transform = 'translateY(30px)';
-            element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        });
-
-        window.addEventListener('scroll', checkScroll);
-        window.addEventListener('load', checkScroll);
-
-        
-        document.getElementById('project-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            
-            const formData = new FormData(this);
-            let isValid = true;
-            
-            for (let [key, value] of formData) {
-                if (key !== 'nda' && value.trim() === '') {
-                    isValid = false;
-                    break;
-                }
-            }
-            
-            if (isValid) {
-                
-                alert('Thank you for your submission! We will contact you soon.');
-                this.reset();
-            } else {
-                alert('Please fill in all required fields.');
-            }
-        });
-    </script>
 </body>
 </html>
+
+<script>
+    let bar = document.querySelector(".bar")
+    let mobile = document.querySelector(".mobile")
+    bar.addEventListener("click" , ()=>{
+        mobile.classList.toggle("visible-nav")
+    })
+</script>
