@@ -60,17 +60,21 @@
     <section id="home">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                  <h1>From Local to Globel <br> We Build , <span style="color:#0E2148">You Grow</span></h1>
-                  <p class="text-muted">" From Local to Global, We Build, You Grow " reflects our mission to empower businesses at every stage. We craft tailored solutions that start from your roots and expand your reach worldwide. With innovation, strategy, and support, we build your path to success — helping you grow beyond boundaries with confidence.</p>
-                  <button class="btn btn-dark"><a href="#templates" style="text-decoration:none; color:white;">See templates </a></button>
-                  <button class="btn  btn-outline-primary"><a href="#service"  style="text-decoration:none; color:black;"> Service</a></button>
+                <div class="col-md-12">
+                  <h1 id="typed">From Local to Globel  <span style="color:#cc350fc5"> We Build , You Grow</span></h1>
+                  <p class="text-muted mb-3">" From Local to Global, We Build, You Grow " reflects our mission to empower businesses at every stage. </p>
+                  
+<button>
+    <span class="circle1"></span>
+    <span class="circle2"></span>
+    <span class="circle3"></span>
+    <span class="circle4"></span>
+    <span class="circle5"></span>
+    <span class="text"><a href="#templates" style="color:white; text-decoration: none;">View Templates</a></span>
+</button>
+                  
                 </div>
-                <div class="col-md-6">
-
-                    <img src="https://preview.colorlib.com/theme/launch/images/market-launch-pana.svg" class="img-fluid" alt="">
-                    
-                </div>
+              
             </div>
         </div>
     </section>
@@ -249,7 +253,6 @@
         </div>
       </div>
 
-      <!-- AI Analytics -->
       <div class="col-md-6 col-lg-4">
         <div class="p-4 shadow rounded bg-white h-100">
           <h5>📊 AI Insights & Analytics</h5>
@@ -313,21 +316,36 @@
 
 
 
-<section id="templates" >
+
+<section id="templates" style="background: linear-gradient(135deg, #f0f4ff, #e8f0ff); padding: 60px 0;">
   <div class="container">
-    <h1 class="text-center"> Website templates </h1>
-    <p class="text-muted text-center "> Visit Our Website Templates And Choose One From this You Want</p>
-    <div class="row g-4 mt-4"> 
+    <!-- Heading -->
+    <h1 class="text-center fw-bold mb-3" style="font-size: 2.5rem; color: #2c3e50;">
+      Website <span style="color:#007bff;">Templates</span>
+    </h1>
+    <p class="text-muted text-center mb-5" style="font-size: 1.1rem;">
+      Visit our collection of beautiful templates and choose one that fits your needs.
+    </p>
+
+    <!-- Templates Grid -->
+    <div class="row g-4">
       {% if templates %}
         {% for i in templates %}
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex ">
-            <div class="card w-100 shadow-sm">
-              <img src="{{ i.img }}" class="card-img-top" alt="{{ i.title }}">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">{{ i.title }}</h5>
-                <h5 class="card-title">{{ i.des }}</h5>
-                <p class="card-text text-muted">{{ i.category }}</p>
-                <a href="{{ i.Links }}" class="btn btn-primary mt-auto">Preview</a>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="card w-100 shadow-lg border-0 rounded-4 overflow-hidden" 
+                 style="transition: transform 0.3s, box-shadow 0.3s;">
+              
+              <!-- Image with hover effect -->
+              <img src="{{ i.img }}" class="card-img-top" alt="{{ i.title }}" 
+                   style="object-fit: cover; height: 200px; transition: transform 0.4s;">
+              
+              <div class="card-body d-flex flex-column text-center">
+                <h5 class="card-title fw-bold" style="color:#2c3e50;">{{ i.title }}</h5>
+                <p class="text-muted" style="font-size: 0.95rem;">{{ i.des }}</p>
+                <span class="badge bg-primary mb-3">{{ i.category }}</span>
+                <a href="{{ i.Links }}" class="btn btn-outline-primary mt-auto fw-semibold">
+                  Preview
+                </a>
               </div>
             </div>
           </div>
@@ -417,11 +435,24 @@
 
 </body>
 </html>
-
+     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0"></script>
 <script>
     let bar = document.querySelector(".bar")
     let mobile = document.querySelector(".mobile")
     bar.addEventListener("click" , ()=>{
         mobile.classList.toggle("visible-nav")
     })
+ document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-8px)";
+      card.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
+      card.querySelector("img").style.transform = "scale(1.05)";
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0)";
+      card.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+      card.querySelector("img").style.transform = "scale(1)";
+    });
+  });
+    
 </script>
