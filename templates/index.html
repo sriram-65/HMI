@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,10 +58,36 @@
         </div>
     </header>
 
+
+
+      <div class="modal fade" id="hiringModal" tabindex="-1" aria-labelledby="hiringModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="hiringModalLabel">🚀 We Are Hiring!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <h4 class="mb-3">Join HMI as a Web Developer</h4>
+          <p>
+            We’re looking for passionate web developers to work on exciting projects.  
+            If you have skills in <b>HTML, CSS, JS, Flask, or MERN</b>, we want you on our team!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="/hmi/dev/user-application" class="btn btn-success">Apply Now</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Maybe Later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <section id="home">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                  
                   <h1 id="typed">From Local to Globel  <span style="color:#cc350fc5"> We Build , You Grow</span></h1>
                   <p class="text-muted mb-3">" From Local to Global, We Build, You Grow " reflects our mission to empower businesses at every stage. </p>
                   
@@ -133,7 +160,10 @@
                 <br>
                 📈 Start your digital journey today with a website that works as hard as you do.
                 </p>
-             
+                <p>We are Hiring If you want to Work With Us then Apply Now</p>
+                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hiringModal">
+     Apply Now 
+  </button>
             </div>
             <div class="col-md-6">
                 <img src="/static/HMI.png" class="img-fluid" alt="Home Made Inviations">
@@ -454,5 +484,20 @@
       card.querySelector("img").style.transform = "scale(1)";
     });
   });
+
+     window.addEventListener('load', () => {
+      
+
+      fetch("/check-session").then(res=>res.json()).then(data=>{
+         if(data.sucess===true){
+         const hiringModal = bootstrap.Modal.getInstance(document.getElementById('hiringModal'));
+         hiringModal.hide();
+         }
+         else{
+          const hiringModal = new bootstrap.Modal(document.getElementById('hiringModal'));
+          hiringModal.show();
+         }
+      }).catch(e=>console.log(e))
+    });
     
 </script>
