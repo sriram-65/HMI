@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Submitted - HMI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --accent: #2ecc71;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+    }
+    
+    .confirmation-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 550px;
+      width: 100%;
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    .card-header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      position: relative;
+    }
+    
+    .card-body {
+      padding: 30px;
+    }
+    
+    .success-icon {
+      width: 100px;
+      height: 100px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: -65px auto 20px;
+      box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+      position: relative;
+      animation: scaleIn 0.5s ease-out;
+    }
+    
+    .success-icon i {
+      font-size: 50px;
+      color: white;
+    }
+    
+    .confirmation-title {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .confirmation-text {
+      color: #7f8c8d;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+    
+    .next-steps {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 25px 0;
+    }
+    
+    .next-steps h5 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .steps-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .steps-list li {
+      padding: 8px 0;
+      padding-left: 30px;
+      position: relative;
+      color: #5a6c7d;
+    }
+    
+    .steps-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    
+    .btn-primary {
+      background: var(--secondary);
+      border: none;
+      padding: 12px 25px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.3s;
+      margin-left: 10px;
+    }
+    
+    .btn-outline:hover {
+      background: rgba(52, 152, 219, 0.1);
+    }
+    
+    .hmi-logo {
+      font-weight: 800;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      color: white;
+      background: var(--accent);
+      padding: 5px 15px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes scaleIn {
+      from { transform: scale(0); }
+      to { transform: scale(1); }
+    }
+    
+    @media (max-width: 576px) {
+      .confirmation-card {
+        margin: 10px;
+      }
+      
+      .card-body {
+        padding: 20px;
+      }
+      
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .btn-outline {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="confirmation-card">
+    <div class="card-header">
+      <div class="hmi-logo">HMI</div>
+      <h3>Application Received</h3>
+    </div>
+    
+    <div class="card-body">
+      <div class="success-icon">
+        <i class="fas fa-check"></i>
+      </div>
+      
+      <h2 class="confirmation-title">Thank You for Your Application!</h2>
+      <p class="confirmation-text">
+        We've successfully received your application for <strong>HMI</strong>. 
+        Our recruitment team will carefully review your submission and contact you 
+        within 3-5 business days.
+      </p>
+      
+      <div class="next-steps">
+        <h5>What happens next?</h5>
+        <ul class="steps-list">
+          <li>Application review by our team</li>
+          <li>Possible follow-up call for additional information and we send mail to you! if you selceted as interview rounds</li>
+          <li>Notification of application status</li>
+          <li>Interview scheduling if selected</li>
+        </ul>
+      </div>
+      
+      <p class="text-muted small">
+        We will send one Verification Mail you can feel free to check out
+      </p>
+      
+      <div class="button-group mt-4">
+        <a href="/" class="btn btn-primary">
+          <i class="fas fa-home me-2"></i>Return to Homepage
+        </a>
+        <a href="/careers" class="btn btn-outline">
+          <i class="fas fa-briefcase me-2"></i>View Other Positions
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
