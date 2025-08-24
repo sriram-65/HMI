@@ -2,3 +2,4 @@ flask
 gunicorn
 cloudinary
 pymongo
+flask_mail
